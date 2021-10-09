@@ -1,2 +1,4 @@
 github.com/gompus/snowflake v0.0.3 h1:qV4bcbGfszy/DgScr8V6+B2vgT+tM9p4M8vOnpvdy8w=
 github.com/gompus/snowflake v0.0.3/go.mod h1:jDeGmYm6wmB0UW8kCj41fRLYRiPTkLubeR8Im4vhDfA=
+github.com/gompus/timestamp v0.0.0-20211009130839-435e0f42e838 h1:MYeMWOlf430N0NnQbeNpXSgqIdIczmjc4ifmn/0kcxg=
+github.com/gompus/timestamp v0.0.0-20211009130839-435e0f42e838/go.mod h1:2W5M/gETmMsWD5/gSo/Y9xTnGG2xoMWaVArusN/K7Xg=
