@@ -90,6 +90,7 @@ var permissionToString = map[Permissions]string{
 	StartEmbeddedActivities: "StartEmbeddedActivities",
 }
 
+// String returns the string representation of p.
 func (p Permissions) String() string {
 	var out []string
 	for perm, s := range permissionToString {
