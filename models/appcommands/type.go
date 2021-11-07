@@ -1,5 +1,7 @@
 package appcommands
 
+//go:generate stringer -type=Type -trimprefix=Type
+
 // Type represents the type of an ApplicationCommand.
 // See https://discord.com/developers/docs/interactions/application-commands#application-command-object-application-command-types.
 type Type int
