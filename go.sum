@@ -3,6 +3,8 @@ github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/gompus/snowflake v0.0.3 h1:qV4bcbGfszy/DgScr8V6+B2vgT+tM9p4M8vOnpvdy8w=
 github.com/gompus/snowflake v0.0.3/go.mod h1:jDeGmYm6wmB0UW8kCj41fRLYRiPTkLubeR8Im4vhDfA=
+github.com/gompus/timestamp v0.0.0-20211009130839-435e0f42e838 h1:MYeMWOlf430N0NnQbeNpXSgqIdIczmjc4ifmn/0kcxg=
+github.com/gompus/timestamp v0.0.0-20211009130839-435e0f42e838/go.mod h1:2W5M/gETmMsWD5/gSo/Y9xTnGG2xoMWaVArusN/K7Xg=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
