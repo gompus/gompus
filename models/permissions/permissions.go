@@ -1,6 +1,11 @@
 package permissions
 
-import "strings"
+import (
+	"encoding/json"
+	"math/big"
+	"strconv"
+	"strings"
+)
 
 // Permissions represent a Discord user's permissions.
 // See https://discord.com/developers/docs/topics/permissions#permissions.
@@ -99,4 +104,23 @@ func (p Permissions) String() string {
         }
     }
 	return strings.Join(out, "|")
+}
+
+// UnmarshalJSON unmarshals data into p.
+func (p *Permissions) UnmarshalJSON(data []byte) error {
+	var raw string
+	if err := json.Unmarshal(data, &raw); err != nil {
+		return err
+	}
+
+	parsed, err := strconv.ParseInt(raw, 10, 64)
+	if err == nil {
+		*p = Permissions(parsed)
+	}
+	return err
+}
+
+// MarshalJSON returns the JSON representation of p.
+func (p Permissions) MarshalJSON() ([]byte, error) {
+	return big.NewInt(int64(p)).MarshalJSON()
 }
