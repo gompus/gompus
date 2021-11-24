@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"net/url"
 	"reflect"
+	"strings"
 )
 
 const tagKey = "json"
@@ -66,7 +67,7 @@ func shouldOmit(value reflect.Value) bool {
 func getFieldName(field reflect.StructField) string {
 	name, ok := field.Tag.Lookup(tagKey)
 	if ok {
-		return name
+		return strings.Split(name, ",")[0]
 	}
 	return field.Name
 }
