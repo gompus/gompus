@@ -60,5 +60,5 @@ func do(req Request) error {
 	}
 	defer resp.Body.Close()
 
-	return json.NewDecoder(resp.Body).Decode(req.Body)
+	return json.NewDecoder(resp.Body).Decode(req.Result)
 }
