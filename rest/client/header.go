@@ -1,6 +1,8 @@
 package client
 
-import "github.com/gompus/gompus/rest/auth"
+import (
+	"github.com/gompus/gompus/rest/client/auth"
+)
 
 // A HeaderFunc provides a request header.
 type HeaderFunc func() (key string, value string)
