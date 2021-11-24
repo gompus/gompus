@@ -21,12 +21,21 @@ func GenerateQuery(v interface{}) url.Values {
 }
 
 func iterStructFields(v interface{}, fn func(field reflect.StructField, val reflect.Value)) {
-	if v == nil || isZero(v) {
-		return
-	}
-
 	rv := reflect.Indirect(reflect.ValueOf(v))
 	rt := rv.Type()
+
+	if rt.Kind() == reflect.Slice || rt.Kind() == reflect.Array {
+		if rv.Len() == 0 {
+			return
+		}
+
+		rv = rv.Index(0)
+		rt = rv.Type()
+
+		if rv.IsZero() {
+			return
+		}
+	}
 
 	if rt.Kind() == reflect.Struct {
 		for i := 0; i < rt.NumField(); i++ {
@@ -60,8 +69,4 @@ func getFieldName(field reflect.StructField) string {
 		return name
 	}
 	return field.Name
-}
-
-func isZero(v interface{}) bool {
-	return v == reflect.Zero(reflect.TypeOf(v)).Interface()
 }
