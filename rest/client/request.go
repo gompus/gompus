@@ -13,8 +13,8 @@ type Request struct {
 	// Method is the request's HTTP method.
 	Method Method
 
-	// Url is the url the request should be dispatched to.
-	Url string
+	// Path is the relative path the request should be dispatched to.
+	Path string
 
 	// Query contains the request's query parameters.
 	Query url.Values
@@ -37,7 +37,7 @@ func (r Request) makeHttpRequest() (*http.Request, error) {
 		return nil, err
 	}
 
-	req, err := http.NewRequest(string(r.Method), r.Url, body)
+	req, err := http.NewRequest(string(r.Method), resolvePath(r.Path), body)
 	if err != nil {
 		return nil, err
 	}
