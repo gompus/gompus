@@ -3,6 +3,7 @@ package client
 import (
 	"bytes"
 	"encoding/json"
+	"github.com/gompus/gompus/rest/client/auth"
 	"io"
 	"net/http"
 	"net/url"
@@ -29,6 +30,10 @@ type Request struct {
 	// Result contains the value the response
 	// body should be decoded into.
 	Result interface{}
+
+	// Token is the auth token that should
+	// be used when sending the request.
+	Token auth.Token
 }
 
 func (r Request) makeHttpRequest() (*http.Request, error) {
@@ -42,6 +47,9 @@ func (r Request) makeHttpRequest() (*http.Request, error) {
 		return nil, err
 	}
 
+	if r.Token != "" {
+		r.Headers = append(r.Headers, AuthHeader(r.Token))
+	}
 	for _, header := range r.Headers {
 		req.Header.Set(header())
 	}
