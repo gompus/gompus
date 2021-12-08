@@ -10,10 +10,8 @@ import (
 // used when setting a voice or stage channel's rtc region.
 func ListRegions(token auth.Token) (regions []voice.Region, err error) {
 	return regions, client.GET(client.Request{
-		Path: "/voice/regions",
-		Headers: []client.HeaderFunc{
-			client.AuthHeader(token),
-		},
+		Path:   "/voice/regions",
+		Token:  token,
 		Result: &regions,
 	})
 }

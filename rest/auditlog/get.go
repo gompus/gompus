@@ -28,11 +28,9 @@ type GetParams struct {
 // Get retrieves the audit log of the guild with the given id.
 func Get(token auth.Token, guildID snowflake.Snowflake, params ...GetParams) (auditlog auditlog.AuditLog, err error) {
 	return auditlog, client.GET(client.Request{
-		Path:  fmt.Sprintf("/guilds/%s/audit-logs", guildID),
-		Query: client.GenerateQuery(params),
-		Headers: []client.HeaderFunc{
-			client.AuthHeader(token),
-		},
+		Path:   fmt.Sprintf("/guilds/%s/audit-logs", guildID),
+		Query:  client.GenerateQuery(params),
+		Token:  token,
 		Result: &auditlog,
 	})
 }
