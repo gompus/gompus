@@ -13,7 +13,7 @@ type ModifyParams struct {
 	Topic string `json:"topic,omitempty"`
 
 	// PrivacyLevel is the stage's privacy level.
-	PrivacyLevel stage.PrivacyLevel `json:"privacyLevel,omitempty"`
+	PrivacyLevel stage.PrivacyLevel `json:"privacy_level,omitempty"`
 }
 
 // Modify updates attributes of the

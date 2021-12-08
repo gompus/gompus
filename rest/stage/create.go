@@ -10,13 +10,13 @@ import (
 
 type CreateParams struct {
 	// ChannelID is the id of the stage channel.
-	ChannelID snowflake.Snowflake `json:"channelId,omitempty"`
+	ChannelID snowflake.Snowflake `json:"channel_id,omitempty"`
 
 	// Topic is the state's topic.
 	Topic string `json:"topic,omitempty"`
 
 	// PrivacyLevel is the stage's privacy level (default: GUILD_ONLY).
-	PrivacyLevel event.PrivacyLevel `json:"privacyLevel,omitempty"`
+	PrivacyLevel event.PrivacyLevel `json:"privacy_level,omitempty"`
 }
 
 // Create creates a new stage.
