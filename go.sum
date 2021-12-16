@@ -5,6 +5,8 @@ github.com/gompus/snowflake v0.0.3 h1:qV4bcbGfszy/DgScr8V6+B2vgT+tM9p4M8vOnpvdy8
 github.com/gompus/snowflake v0.0.3/go.mod h1:jDeGmYm6wmB0UW8kCj41fRLYRiPTkLubeR8Im4vhDfA=
 github.com/gompus/timestamp v0.0.0-20211009130839-435e0f42e838 h1:MYeMWOlf430N0NnQbeNpXSgqIdIczmjc4ifmn/0kcxg=
 github.com/gompus/timestamp v0.0.0-20211009130839-435e0f42e838/go.mod h1:2W5M/gETmMsWD5/gSo/Y9xTnGG2xoMWaVArusN/K7Xg=
+github.com/google/uuid v1.3.0 h1:t6JiXgmwXMjEs8VusXIJk2BXHsn+wx8BZdTaoZ5fu7I=
+github.com/google/uuid v1.3.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
 github.com/gorilla/websocket v1.4.2 h1:+/TMaTYc4QFitKJxsQ7Yye35DkWvkdLcvGKqM+x0Ufc=
 github.com/gorilla/websocket v1.4.2/go.mod h1:YR8l580nyteQvAITg2hZ9XVh4b55+EU/adAjf1fMHhE=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
